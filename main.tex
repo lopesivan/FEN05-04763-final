@@ -50,7 +50,7 @@ Outro requisito do sistema diz respeito à água utilizada para a irrigação, a
 Relativo aos equipamentos e dispositivos utilizados, o projeto básico contempla o uso de um microcontrolador ATmega328P,  onde será executado a programação, uma placa ESP8266 para a realização da comunicação sem fio, sensores de nível e umidade do solo, um reservatório, para o acumulo da água a ser utilizada e válvulas para realização do controle do fluxo de água. O sistema deve contar ainda com uma fonte alternada de $127 V$, para alimentação das válvulas, e uma fonte contínua de $5 V$, para alimentação dos circuitos eletrônicos. Na Fig. \ref{fig1}, pode-se perceber o esquema ilustrativo simplificado da unidade de irrigação e suas conexões em nível de equipamentos e componentes.
 
 \begin{figure}[htbp]
-\centerline{\includegraphics[angle=0, scale=.2]{Img1.png}}
+\centerline{\includegraphics[angle=0, scale=.2]{images/Img1.png}}
 \caption{Esquema simplificado do projeto básico.}
 \label{fig1}
 \end{figure}
@@ -58,7 +58,7 @@ Relativo aos equipamentos e dispositivos utilizados, o projeto básico contempla
 Na Fig. \ref{fig2}, é explicitado fluxo de informações entre os subsistemas da unidade remota de irrigação. O referido \textit{RTC} marca a passagem de tempo, comunicando-o ao subsistema de acionamento do motor. No tempo determinado, este opera sujeito ainda às condições reportadas pelos sensores e pela comunicação sem fio com o usuário, que, por sua vez, também recebe o status das condições locais vindas dos sensores, caso solicitado pelo usuário. A comunicação sem fio é utilizada ainda para atualização do relógio, impedindo que este perca a sua precisão, e para a configuração inicial das variáveis do relógio.
 
 \begin{figure}[htbp]
-\centerline{\includegraphics[angle=0, scale=.3]{Img2.png}}
+\centerline{\includegraphics[angle=0, scale=.3]{images/Img2.png}}
 \caption{Fluxo de informações entre os subsistemas.}
 \label{fig2}
 \end{figure}
@@ -145,7 +145,7 @@ Suporte 802.11 & b/g/n/d/e/i/k/r \\
 Utilizando o software de simulação de circuitos eletrônicos \textit{Proteus}, realizou-se a simulação do circuito principal de acionamento do motor, constituído pelo microcontrolador ATmega328P, pelo optoacoplador, pelo relé e por uma lâmpada alimentada por $127 V$, simbolizando o acionamento do motor. Foi configurada o horário inicial do relógio, um horário de acionamento e um horário de desligamento da lâmpada representando a válvula. Para a simulação, foi adicionada ao \textit{Proteus} uma biblioteca contendo placas de Arduino, para que se pudesse utilizar o microcontrolador ATmega328P de forma mais simplificada, como posteriormente foi feito na prática. Ao se iniciar a simulação, decorrido o tempo esperado entre o tempo inicial configurado e o tempo de acionamento, a lâmpada acendeu e, de igual forma, decorrido o tempo configurado para permanência da saída acionada, a lâmpada se apagou. Dessa forma, constatou-se a correta operação do sistema principal da unidade remota de irrigação. O digrama utilizado, explicitando o circuito, é mostrado na Fig. \ref{fig3}.
 
 \begin{figure}[htbp]
-\centerline{\includegraphics[angle=0, scale=.2]{Img3.png}}
+\centerline{\includegraphics[angle=0, scale=.2]{images/Img3.png}}
 \caption{Diagrama utilizado no \textit{Proteus} para a simulação.}
 \label{fig3}
 \end{figure}
@@ -153,7 +153,7 @@ Utilizando o software de simulação de circuitos eletrônicos \textit{Proteus},
 Ademais, foi montado um protótipo para teste da comunicação entre a placa ESP8266 e o microcontrolador, também coordenando o acionamento e desligamento de um LED. A configuração da placa ESP8266 foi realizada e a conexão bem sucedida, tanto com a Internet, quanto com a placa Arduino utilizada no teste. A partir dessa conexão, podem ser alcançados os objetivos iniciais do projeto, no que diz respeito à comunicação com o usuário, tanto para recebimento de sinais de controle quanto para relatórios de status do sistema e dos sensores. Podem ser alcançados também os objetivos referentes a comunicação com o sistema principal, no que diz respeito à atualização dos valores do relógio, tanto no momento da inicialização quanto de hora em hora, para manutenção da sincronia. A Fig. \ref{fig4} apresenta um esquema simplificado da conexão da placa ESP8266 com a placa Arduino Uno.
 
 \begin{figure}[htbp]
-\centerline{\includegraphics[angle=0, scale=.2]{Img4.png}}
+\centerline{\includegraphics[angle=0, scale=.2]{images/Img4.png}}
 \caption{Conexão da ESP8266 com o Arduino Uno.}
 \label{fig4}
 \end{figure}
