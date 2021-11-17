@@ -15,23 +15,11 @@
 
 \title{Unidade Remota de Irrigação\\}
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Luana Merenciano da Silva}
-\IEEEauthorblockA{\textit{Departamento de Engenharia Elétrica} \\
-\textit{Universidade Federal Fluminense}\\
-Niterói, Brasil \\
-lumerenciano$@$yahoo.com.br}
-\and
-\IEEEauthorblockN{2\textsuperscript{nd} Ivan Carlos da Silva Lopes}
+\author{\IEEEauthorblockN{Ivan Carlos da Silva Lopes}
 \IEEEauthorblockA{\textit{Departamento de Engenharia Elétrica} \\
 \textit{Universidade Federal Fluminense}\\
 Niterói, Brasil \\\
 ivanlopes$@$id.uff.br}
-\and
-\IEEEauthorblockN{3\textsuperscript{rd} Pedro Henrique Gomes dos Santos}
-\IEEEauthorblockA{\textit{Departamento de Engenharia Elétrica} \\
-\textit{Universidade Federal Fluminense}\\
-Niterói, Brasil \\
-ph\_ santos$@$id.uff.br}
 }
 
 \maketitle
@@ -113,7 +101,7 @@ A cada irrigação, é verificado o nível do reservatório. Caso o sensor de n�
 
 \subsection{Comunicação Sem Fio}
 
-A comunicação sem fio será realizada através de um módulo ESP8266. O ESP8266 é um microcontrolador produzido pela empresa Espressif Systems. Esse microcontrolador possui um sistema de comunicação WiFi próprio, que é o seu grande diferencial. Por esse motivo ele é largamente utilizado como módulo WiFi para outros microcontroladores, como o Arduíno, por exemplo, apesar de possuir um processador próprio, e de ser possível utilizar somente o ESP8266 para criar sistemas embarcados. Uma vantagem do ESP8266 é o seu baixo custo, geralmente na faixa de 20 a 50 reais. O Esp8266 está no mercado desde 2014, o que faz com que ainda existam poucos artigos e trabalhos sobre ele. A principal publicação sobre o mesmo é \cite{b2}, que demonstra quais são as formas de programar o ESP8266 e quais são as suas utilidades, bem como a eletrônica necessária para realizar os projetos demonstrados. 
+A comunicação sem fio será realizada através de um módulo ESP8266. O ESP8266 é um microcontrolador produzido pela empresa Espressif Systems. Esse microcontrolador possui um sistema de comunicação WiFi próprio, que é o seu grande diferencial. Por esse motivo ele é largamente utilizado como módulo WiFi para outros microcontroladores, como o Arduíno, por exemplo, apesar de possuir um processador próprio, e de ser possível utilizar somente o ESP8266 para criar sistemas embarcados. Uma vantagem do ESP8266 é o seu baixo custo, geralmente na faixa de 20 a 50 reais. O Esp8266 está no mercado desde 2014, o que faz com que ainda existam poucos artigos e trabalhos sobre ele. A principal publicação sobre o mesmo é \cite{b2}, que demonstra quais são as formas de programar o ESP8266 e quais são as suas utilidades, bem como a eletrônica necessária para realizar os projetos demonstrados.
 
 Existem diversos tipos de modelos do ESP8266, como o ESP-1, ESP-12, Esp Olimex por exemplo. Como o processador é o mesmo para todos os modelos do ESP8266, mudando apenas o número de pinos de entrada e saída (GPIO) disponíveis, memória disponível e o espaçamento entre os pinos, com isso, foi escolhido se utilizar o NODEMCU, por ele ter um número razoável de entradas e saídas para esse projeto e pela facilidade de obtê-lo.
 
@@ -122,7 +110,7 @@ O padrão encontrado para estabelecer a comunicação entre o ESP8266 e o Arduin
 No projeto, o ESP8266 tem o papel de mestre (placa controladora) e o Arduino de escravo, pois a gerência da placa com Arduino é feita pelo ESP8266.
 
 \subsection{Comunicação Web com o ESP8266}
-O ESP8266 que que no caso desempenha o papel de master no projeto, recebeu uma API REST, para comunicação, que possibilita até cinco dispositivos conectados pelo wifi ao mesmo tempo, tais como 
+O ESP8266 que que no caso desempenha o papel de master no projeto, recebeu uma API REST, para comunicação, que possibilita até cinco dispositivos conectados pelo wifi ao mesmo tempo, tais como
 celulares e ou paginas web.
 
 
