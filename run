@@ -1,0 +1,1 @@
+while inotifywait -e modify main.tex; do make; done
